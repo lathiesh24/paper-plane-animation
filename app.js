@@ -1,17 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const tl = gsap.timeline();
 
-
-gsap.to(".square",{
+tl.to(".box",{
      x: 800,
-     duration: 10,
-     scrollTrigger: {
-        trigger:".square",
-        start:"top center",
-        end: "bottom center",
-        scrub:5,
-        pin:true,
-        toggleActions:"restart none reverse none",
-        markers: true,
-     }
+     duration: 2,
+})
+
+tl.to(".box",{
+    y:200,
+    duration: 3,
+})
+
+tl.to(".box",{
+    x:0,
+    duration: 3,
 })
