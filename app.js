@@ -3,13 +3,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 gsap.to(".square",{
-     x: 700,
-     duration: 3,
+     x: 800,
+     duration: 10,
      scrollTrigger: {
         trigger:".square",
-        start:"top 30%",
-        end: "top 40%",
-        toggleActions:"play none none none",
+        start:"top center",
+        end: "bottom center",
+        scrub:5,
+        pin:true,
+        toggleActions:"restart none reverse none",
         markers: true,
      }
 })
